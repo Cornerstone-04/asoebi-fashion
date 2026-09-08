@@ -5,6 +5,9 @@ import { EditorialPage } from "@/components/layout/editorial-page";
 import { ArrowLink } from "@/components/ui/arrow-link";
 import { createMetadata } from "@/lib/seo";
 
+const ticketUrl =
+  "https://www.eventbrite.co.uk/e/asoebi-after-party-tickets-1999945930114";
+
 const eventDetails = [
   ["Date", "Friday, 2 October 2026"],
   ["Time", "12:00 PM to 12:00 AM"],
@@ -48,28 +51,29 @@ export default function Page() {
     <EditorialPage
       eyebrow="October 2, 2026 · London"
       title="Asoebi After Party"
-      intro="October Owambe. An all-day, all-night celebration of West African style, music and community."
+      intro="October Owambe. An intimate celebration of Nigerian culture, traditional fashion, music, drinks and good energy."
       heroImage="/images/tickets-editorial.png"
       heroImageAlt="An editorial Asoebi Fashion Week ticket illustration"
       heroTone="blush"
-      cta={{ href: "/#waitlist", label: "Join for event updates" }}
+      cta={{ href: ticketUrl, label: "Get tickets" }}
     >
       <section className="grid gap-10 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
         <h2 className="font-display text-6xl leading-[.88] tracking-[-.06em] sm:text-8xl">
           London, dressed for the occasion.
         </h2>
         <p className="max-w-xl text-lg leading-8 text-asoebi-graphite">
-          Come dressed for a West African wedding and ready for good music, good
-          people and good energy.
+          The celebration does not end when the ceremony does. We are keeping
+          the Owambe spirit going with 100 guests, traditional style and a full
+          day of good company.
         </p>
       </section>
 
       <section className="mt-24 overflow-hidden bg-asoebi-purple-950 text-white">
         <div className="grid lg:grid-cols-[.82fr_1.18fr]">
-          <div className="relative min-h-180 bg-black">
+          <div className="relative aspect-square bg-asoebi-charcoal lg:aspect-auto lg:min-h-160">
             <Image
-              src="/images/after-party/october-owambe-invitation.webp"
-              alt="Official October Owambe invitation with the event date, entry price, hosts and dress code"
+              src="/images/after-party/asoebi-invitation.jpg"
+              alt="Official Asoebi After Party October Owambe invitation with the event date, time, capacity and hosts"
               fill
               loading="eager"
               sizes="(min-width: 1024px) 42vw, 100vw"
@@ -106,11 +110,12 @@ export default function Page() {
             The experience
           </p>
           <h2 className="mt-5 font-display text-5xl leading-[.92] tracking-tighter sm:text-7xl">
-            Come dressed. Come ready.
+            Come dressed. Come correct. Come ready to Owambe.
           </h2>
           <p className="mt-7 max-w-lg text-lg leading-8 text-asoebi-graphite">
             Dress code is strictly traditional attire for a West African wedding
-            in purple, gold, white or black. Indoor seating is available on a
+            in purple, gold, white or black. Expect music, drinks and good
+            energy from noon into the night. Indoor seating is available on a
             first come, first served basis.
           </p>
         </div>
@@ -130,7 +135,7 @@ export default function Page() {
             ))}
           </ul>
           <div className="mt-10">
-            <ArrowLink href="/#waitlist">Join for event updates</ArrowLink>
+            <ArrowLink href={ticketUrl}>Get tickets</ArrowLink>
           </div>
         </div>
       </section>
@@ -165,7 +170,7 @@ export default function Page() {
               ].map(([label, tone]) => (
                 <li
                   key={label}
-                  className={`rounded-full px-4 py-2 text-xs font-bold uppercase ${tone}`}
+                  className={`flex items-center justify-center rounded-full px-4 py-2 text-xs font-bold uppercase ${tone}`}
                 >
                   {label}
                 </li>

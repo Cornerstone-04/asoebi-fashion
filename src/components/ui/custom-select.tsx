@@ -303,7 +303,7 @@ export function CustomSelect({
             }
             onKeyDown={handleListboxKeyDown}
             style={listboxStyle}
-            className="fixed z-100 [scrollbar-width:thin] [scrollbar-color:theme(colors.asoebi-purple-200)_transparent] overflow-y-auto rounded-3xl bg-white p-2 shadow-[0_18px_55px_rgba(42,17,87,.16)] outline-hidden [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-asoebi-purple-200 hover:[&::-webkit-scrollbar-thumb]:bg-asoebi-purple-300 [&::-webkit-scrollbar-track]:bg-transparent"
+            className="fixed z-100 scrollbar-thin [scrollbar-color:var(--color-asoebi-purple-200)_transparent] overflow-y-auto rounded-3xl bg-white p-2 shadow-[0_18px_55px_rgba(42,17,87,.16)] outline-hidden [&::-webkit-scrollbar]:w-1.5 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-thumb]:bg-asoebi-purple-200 hover:[&::-webkit-scrollbar-thumb]:bg-asoebi-purple-300 [&::-webkit-scrollbar-track]:bg-transparent"
           >
             {options.map((option, index) => {
               const isSelected = option.value === value;

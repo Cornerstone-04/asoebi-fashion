@@ -9,9 +9,13 @@ export function ArrowLink({
   children: React.ReactNode;
   inverse?: boolean;
 }) {
+  const external = /^https?:\/\//.test(href);
+
   return (
     <Link
       href={href}
+      target={external ? "_blank" : undefined}
+      rel={external ? "noreferrer" : undefined}
       className={`group transition-linear inline-flex min-h-11 items-center gap-3 border-b py-2 text-xs font-semibold tracking-[0.16em] uppercase transition-colors ${inverse ? "border-asoebi-paper/40 hover:border-asoebi-paper" : "border-asoebi-ink/30 hover:border-brand hover:text-brand"}`}
     >
       {children}
