@@ -141,20 +141,11 @@ export default function Page() {
 
       <section className="mt-24 overflow-hidden bg-asoebi-purple-950 text-white">
         <div className="grid lg:grid-cols-[1.1fr_.9fr]">
-          <div className="grid min-h-144 grid-cols-2">
+          <div className="grid min-h-144">
             <div className="relative">
               <Image
-                src="/images/editorial/fashion-story/the-modern-runway.webp"
+                src="/images/editorial/fashion-story/asoebi-founders.webp"
                 alt="Models presenting contemporary African fashion on a runway"
-                fill
-                sizes="(min-width: 1024px) 28vw, 50vw"
-                className="object-cover"
-              />
-            </div>
-            <div className="relative">
-              <Image
-                src="/images/editorial/fashion-story/the-textile-detail.webp"
-                alt="A designer refining the details of an African fashion look"
                 fill
                 sizes="(min-width: 1024px) 28vw, 50vw"
                 className="object-cover"
